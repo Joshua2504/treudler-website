@@ -341,13 +341,13 @@ body {
 }
 
 .cyber-stat-number {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 8vw, 2.25rem);
     font-weight: 700;
     text-shadow: 0 0 10px currentColor;
 }
 
 .cyber-stat-label {
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 3vw, 0.875rem);
     color: #a0a0a0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
