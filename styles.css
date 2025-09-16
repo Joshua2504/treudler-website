@@ -381,7 +381,7 @@ body {
         linear-gradient(90deg, transparent 0%, rgba(0, 255, 65, 0.1) 50%, transparent 100%),
         linear-gradient(0deg, transparent 0%, rgba(0, 255, 65, 0.1) 50%, transparent 100%);
     background-size: 20px 20px;
-    animation: matrix 10s linear infinite;
+    animation: none;
 }
 
 @keyframes matrix {

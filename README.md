@@ -84,13 +84,13 @@ The website is fully responsive with breakpoints at:
 - [ ] Replace placeholder content
 - [ ] Add your brand colors
 - [ ] Test on different devices
-- [ ] Add Google Analytics (optional)
+- [ ] Add privacy-friendly analytics (Plausible/Matomo) (optional)
 - [ ] Set up form submission backend (optional)
 
 ## 💡 Enhancement Ideas
 
 ### Easy Additions:
-- Add Google Analytics tracking
+- Add privacy-friendly analytics (Plausible/Matomo)
 - Include a favicon
 - Add social media links
 - Create a blog section
@@ -121,9 +121,9 @@ Update these files when using a custom domain:
 
 The contact form currently shows a success message. To make it functional:
 
-1. **Use a form service** (FormSpree, Netlify Forms, etc.)
-2. **Add a backend** (Node.js, PHP, Python)
-3. **Use serverless functions** (Netlify/Vercel Functions)
+1. **Add a backend** (Node.js, PHP, or Python) — self-hosted mailer preferred
+2. **Use serverless functions** (Netlify/Vercel Functions)
+3. **Use a form service** (e.g., FormSpree) if you prefer SaaS
 
 Example with FormSpree:
 ```html
