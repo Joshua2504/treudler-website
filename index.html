@@ -17,12 +17,11 @@
             <div class="nav-logo">
                 <h2>Treudler</h2>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#packages" class="nav-link">What I Manage</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                        <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -34,81 +33,67 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
+                <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Managed Services<br><span class="highlight">Done Right</span></h1>
-                <p class="hero-description">// I'm Joshua, and with my team of experts, we manage your IT infrastructure so you can focus on growing your business.</p>
+                <h1 class="hero-title" data-i18n="hero.title">Elite Managed Services</h1>
+                <p class="hero-description" data-i18n="hero.subtitle">Professional IT infrastructure management with cutting-edge expertise</p>
+                <p data-i18n="hero.description">I'm Joshua, working with my team of experts to deliver comprehensive managed services that keep your business running at peak performance. From cloud infrastructure to cybersecurity, we've got you covered.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#services" class="btn btn-secondary">View Services</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta.primary">Get Started</a>
+                    <a href="#services" class="btn btn-secondary" data-i18n="hero.cta.secondary">Learn More</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <i class="fas fa-server"></i>
-                    <span>24/7 Monitoring</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Security & Backup</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-rocket"></i>
-                    <span>Fast Support</span>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>What I Offer</h2>
-                <p>Comprehensive IT managed services to keep your business running smoothly</p>
+                <h2 data-i18n="services.title">What I Offer</h2>
+                <p data-i18n="services.subtitle">Comprehensive IT managed services to keep your business running smoothly</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
-                    <h3>Cloud Management</h3>
-                    <p>Complete AWS, Azure, and GCP management including migration, optimization, and ongoing support.</p>
+                    <h3 data-i18n="services.cloud.title">Cloud Management</h3>
+                    <p data-i18n="services.cloud.desc">Complete AWS, Azure, and GCP management including migration, optimization, and ongoing support.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Infrastructure Monitoring</h3>
-                    <p>24/7 proactive monitoring of your servers, networks, and applications with real-time alerts.</p>
+                    <h3 data-i18n="services.support.title">Infrastructure Monitoring</h3>
+                    <p data-i18n="services.support.desc">24/7 proactive monitoring of your servers, networks, and applications with real-time alerts.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-life-ring"></i>
                     </div>
-                    <h3>Help Desk Support</h3>
-                    <p>Responsive technical support for your team with ticketing system and remote assistance.</p>
+                    <h3 data-i18n="services.consulting.title">Help Desk Support</h3>
+                    <p data-i18n="services.consulting.desc">Responsive technical support for your team with ticketing system and remote assistance.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>Backup & Recovery</h3>
-                    <p>Automated backup solutions and disaster recovery planning to protect your critical data.</p>
+                    <h3 data-i18n="services.infrastructure.title">Backup & Recovery</h3>
+                    <p data-i18n="services.infrastructure.desc">Automated backup solutions and disaster recovery planning to protect your critical data.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Security Management</h3>
-                    <p>Endpoint protection, firewall management, and security updates to keep your systems safe.</p>
+                    <h3 data-i18n="services.security.title">Security Management</h3>
+                    <p data-i18n="services.security.desc">Endpoint protection, firewall management, and security updates to keep your systems safe.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h3>System Maintenance</h3>
-                    <p>Regular updates, patches, and optimization to ensure peak performance and reliability.</p>
+                    <h3 data-i18n="services.automation.title">System Maintenance</h3>
+                    <p data-i18n="services.automation.desc">Regular updates, patches, and optimization to ensure peak performance and reliability.</p>
                 </div>
             </div>
         </div>
@@ -118,59 +103,59 @@
     <section id="packages" class="packages">
         <div class="container">
             <div class="section-header">
-                <h2>Services I Manage</h2>
-                <p>Comprehensive IT services to keep your business technology running smoothly</p>
+                <h2 data-i18n="managed.title">Services I Manage</h2>
+                <p data-i18n="managed.subtitle">Comprehensive IT services to keep your business technology running smoothly</p>
             </div>
             <div class="services-list">
                 <div class="services-column">
-                    <h3>Infrastructure & Cloud</h3>
+                    <h3 data-i18n="managed.infrastructure.title">Infrastructure & Cloud</h3>
                     <ul>
-                        <li><i class="fas fa-server"></i> Server Management & Maintenance</li>
-                        <li><i class="fas fa-cloud"></i> AWS, Azure & GCP Management</li>
-                        <li><i class="fas fa-network-wired"></i> Network Configuration & Monitoring</li>
-                        <li><i class="fas fa-database"></i> Database Administration</li>
-                        <li><i class="fas fa-hdd"></i> Storage Solutions & Management</li>
-                        <li><i class="fas fa-wifi"></i> Wireless Network Setup</li>
-                        <li><i class="fas fa-globe"></i> Domain & DNS Management</li>
-                        <li><i class="fas fa-chart-line"></i> Performance Monitoring</li>
+                        <li data-i18n="service.server.management"><i class="fas fa-server"></i> Server Management & Maintenance</li>
+                        <li data-i18n="service.cloud.migration"><i class="fas fa-cloud"></i> AWS, Azure & GCP Management</li>
+                        <li data-i18n="service.network.administration"><i class="fas fa-network-wired"></i> Network Configuration & Monitoring</li>
+                        <li data-i18n="service.storage.solutions"><i class="fas fa-database"></i> Database Administration</li>
+                        <li data-i18n="service.storage.solutions"><i class="fas fa-hdd"></i> Storage Solutions & Management</li>
+                        <li data-i18n="service.network.administration"><i class="fas fa-wifi"></i> Wireless Network Setup</li>
+                        <li data-i18n="service.network.administration"><i class="fas fa-globe"></i> Domain & DNS Management</li>
+                        <li data-i18n="service.performance.optimization"><i class="fas fa-chart-line"></i> Performance Monitoring</li>
                     </ul>
 
-                    <h3>Security & Compliance</h3>
+                    <h3 data-i18n="managed.security.title">Security & Compliance</h3>
                     <ul>
-                        <li><i class="fas fa-shield-alt"></i> Firewall Configuration</li>
-                        <li><i class="fas fa-user-secret"></i> Endpoint Security</li>
-                        <li><i class="fas fa-lock"></i> VPN Setup & Management</li>
-                        <li><i class="fas fa-key"></i> SSL Certificate Management</li>
-                        <li><i class="fas fa-eye"></i> Security Monitoring</li>
-                        <li><i class="fas fa-file-contract"></i> Compliance Management</li>
-                        <li><i class="fas fa-bug"></i> Vulnerability Assessments</li>
-                        <li><i class="fas fa-user-shield"></i> Identity & Access Management</li>
+                        <li data-i18n="service.firewall.management"><i class="fas fa-shield-alt"></i> Firewall Configuration</li>
+                        <li data-i18n="service.endpoint.protection"><i class="fas fa-user-secret"></i> Endpoint Security</li>
+                        <li data-i18n="service.network.administration"><i class="fas fa-lock"></i> VPN Setup & Management</li>
+                        <li data-i18n="service.security.audits"><i class="fas fa-key"></i> SSL Certificate Management</li>
+                        <li data-i18n="service.threat.detection"><i class="fas fa-eye"></i> Security Monitoring</li>
+                        <li data-i18n="service.compliance.management"><i class="fas fa-file-contract"></i> Compliance Management</li>
+                        <li data-i18n="service.vulnerability.assessment"><i class="fas fa-bug"></i> Vulnerability Assessments</li>
+                        <li data-i18n="service.identity.management"><i class="fas fa-user-shield"></i> Identity & Access Management</li>
                     </ul>
                 </div>
                 
                 <div class="services-column">
-                    <h3>Business Applications</h3>
+                    <h3 data-i18n="managed.cloud.title">Business Applications</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> Email Systems (Office 365, Gmail)</li>
-                        <li><i class="fas fa-comments"></i> Communication Platforms</li>
-                        <li><i class="fas fa-file-alt"></i> Document Management</li>
-                        <li><i class="fas fa-calendar"></i> Calendar & Scheduling Systems</li>
-                        <li><i class="fas fa-users"></i> CRM System Management</li>
-                        <li><i class="fas fa-chart-bar"></i> Business Intelligence Tools</li>
-                        <li><i class="fas fa-shopping-cart"></i> E-commerce Platforms</li>
-                        <li><i class="fas fa-mobile-alt"></i> Mobile Device Management</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-envelope"></i> Email Systems (Office 365, Gmail)</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-comments"></i> Communication Platforms</li>
+                        <li data-i18n="service.documentation.management"><i class="fas fa-file-alt"></i> Document Management</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-calendar"></i> Calendar & Scheduling Systems</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-users"></i> CRM System Management</li>
+                        <li data-i18n="service.system.monitoring"><i class="fas fa-chart-bar"></i> Business Intelligence Tools</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-shopping-cart"></i> E-commerce Platforms</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-mobile-alt"></i> Mobile Device Management</li>
                     </ul>
 
-                    <h3>Support & Maintenance</h3>
+                    <h3 data-i18n="managed.support.title">Support & Maintenance</h3>
                     <ul>
-                        <li><i class="fas fa-life-ring"></i> 24/7 Technical Support</li>
-                        <li><i class="fas fa-backup"></i> Automated Backup Solutions</li>
-                        <li><i class="fas fa-sync"></i> Software Updates & Patches</li>
-                        <li><i class="fas fa-tools"></i> System Optimization</li>
-                        <li><i class="fas fa-ambulance"></i> Disaster Recovery Planning</li>
-                        <li><i class="fas fa-code"></i> Custom Script Development</li>
-                        <li><i class="fas fa-cogs"></i> Process Automation</li>
-                        <li><i class="fas fa-clipboard-list"></i> Documentation & Reporting</li>
+                        <li data-i18n="service.help.desk"><i class="fas fa-life-ring"></i> 24/7 Technical Support</li>
+                        <li data-i18n="service.storage.solutions"><i class="fas fa-backup"></i> Automated Backup Solutions</li>
+                        <li data-i18n="service.patch.management"><i class="fas fa-sync"></i> Software Updates & Patches</li>
+                        <li data-i18n="service.performance.optimization"><i class="fas fa-tools"></i> System Optimization</li>
+                        <li data-i18n="service.disaster.recovery"><i class="fas fa-ambulance"></i> Disaster Recovery Planning</li>
+                        <li data-i18n="service.infrastructure.code"><i class="fas fa-code"></i> Custom Script Development</li>
+                        <li data-i18n="service.change.management"><i class="fas fa-cogs"></i> Process Automation</li>
+                        <li data-i18n="service.documentation.management"><i class="fas fa-clipboard-list"></i> Documentation & Reporting</li>
                     </ul>
                 </div>
             </div>
@@ -186,27 +171,27 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Joshua & Team</h2>
-                    <p>I'm Joshua, and I work with a dedicated team of IT experts who understand that technology should work for you, not against you. My mission: provide reliable, proactive IT management that keeps your business running smoothly.</p>
+                    <h2 data-i18n="about.title">Joshua & Team</h2>
+                    <p data-i18n="about.description">I'm Joshua, and I work with a dedicated team of IT experts who understand that technology should work for you, not against you. My mission: provide reliable, proactive IT management that keeps your business running smoothly.</p>
                     <div class="stats">
                         <div class="stat">
                             <span class="stat-number">99.8%</span>
-                            <span class="stat-label">Uptime</span>
+                            <span class="stat-label" data-i18n="about.stats.uptime">Uptime</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">&lt;15min</span>
-                            <span class="stat-label">Response Time</span>
+                            <span class="stat-label" data-i18n="about.stats.response">Response Time</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">50+</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-label" data-i18n="about.stats.satisfaction">Happy Clients</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <div class="image-placeholder">
                         <i class="fas fa-users"></i>
-                        <p>Joshua & His Expert Team</p>
+                        <p data-i18n="about.subtitle">Joshua & His Expert Team</p>
                     </div>
                 </div>
             </div>
@@ -217,8 +202,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to streamline your IT operations? Let's discuss your needs.</p>
+                <h2 data-i18n="contact.title">Get In Touch</h2>
+                <p data-i18n="contact.subtitle">Ready to streamline your IT operations? Let's discuss your needs.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -226,38 +211,38 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>joshua@treudler.com</p>
+                            <p data-i18n="contact.info.email">joshua@treudler.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <p data-i18n="contact.info.phone">+1 (555) 123-4567</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div>
                             <h4>Business Hours</h4>
-                            <p>Mon-Fri 9AM-6PM EST</p>
+                            <p data-i18n="contact.info.location">Mon-Fri 9AM-6PM EST</p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" data-i18n="contact.form.name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" data-i18n="contact.form.email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Company Name">
+                        <input type="text" data-i18n="contact.form.company" placeholder="Company Name">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Tell me about your IT needs" rows="5" required></textarea>
+                        <textarea data-i18n="contact.form.message" placeholder="Tell me about your IT needs" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -269,22 +254,23 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>Treudler</h3>
-                    <p>Managed Services Done Right</p>
+                    <p data-i18n="footer.tagline">Managed Services Done Right</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#packages">What I Manage</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" data-i18n="nav.home">Home</a>
+                    <a href="#services" data-i18n="nav.services">Services</a>
+                    <a href="#packages" data-i18n="managed.title">What I Manage</a>
+                    <a href="#about" data-i18n="nav.about">About</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Treudler. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Treudler. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
