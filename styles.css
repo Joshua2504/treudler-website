@@ -215,6 +215,17 @@ body {
     box-shadow: 0 0 30px rgba(255, 0, 128, 0.3) !important;
 }
 
+.cyber-service-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.cyber-service-header .cyber-card-title {
+    line-height: 1.3;
+    flex: 1;
+}
+
 .cyber-service-icon {
     width: 60px;
     height: 60px;
@@ -224,6 +235,7 @@ body {
     border: 2px solid;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .cyber-service-icon.green {
