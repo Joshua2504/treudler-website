@@ -78,17 +78,11 @@ body {
         radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 50%);
-    /* Disable background pulse to keep hero static */
-    animation: none;
     /* Decorative layer must not block clicks */
     pointer-events: none;
     z-index: 0;
 }
 
-@keyframes pulse {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
 
 .cyber-title {
     text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
@@ -167,8 +161,6 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* Disable floating animation for hero boxes */
-    animation: none;
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
     position: relative;
     overflow: hidden;
@@ -184,16 +176,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Softer float for stacked/mobile layouts */
-@keyframes float-sm {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
+/* removed float animations */
 
 /* Sections */
 .cyber-section {
@@ -532,17 +515,10 @@ body {
 }
 
 /* Tablet & Mobile Responsive */
-/* Use softer float where columns stack (below lg breakpoint) */
 @media (max-width: 991.98px) {
-    /* Ensure absolutely no motion on mobile */
-    .cyber-hero::before {
-        animation: none !important;
-    }
     .cyber-card {
         margin-left: 0 !important;
         justify-content: center;
-        /* Keep static on smaller screens as well */
-        animation: none;
         transform: none;
         z-index: 0;
         will-change: transform;
@@ -563,8 +539,6 @@ body {
     .cyber-card {
         margin-left: 0 !important;
         justify-content: center;
-        /* Subtle motion without overlap */
-        animation: float-sm 6s ease-in-out infinite;
         transform: none;
     }
     
@@ -587,8 +561,6 @@ body {
     
     .cyber-card {
         padding: 1rem;
-        /* No motion on small screens */
-        animation: none;
         transform: none;
     }
     
@@ -606,6 +578,6 @@ body {
     }
     
     .cyber-card {
-        animation: none;
+        /* no animations */
     }
 }
