@@ -200,7 +200,7 @@ const contactForm = document.querySelector('.contact-form');
         button.textContent = 'Message Sent!';
         button.style.background = '#00ff41';
         
-        showNotification(window.i18n ? window.i18n.translate('notification.success') : 'Thank you! We\'ll get back to you within 24 hours.', 'success');
+        showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
         this.reset();
         
         setTimeout(() => {
