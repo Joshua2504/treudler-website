@@ -186,6 +186,12 @@ body {
     50% { transform: translateY(-20px); }
 }
 
+/* Softer float for stacked/mobile layouts */
+@keyframes float-sm {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
 /* Sections */
 .cyber-section {
     background: #0a0a0a;
@@ -270,6 +276,15 @@ body {
     padding: 0.75rem 0;
     border-bottom: 1px solid #222;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Align service icons to a fixed column */
+.cyber-services-list i {
+    width: 1.75rem; /* fixed icon column */
+    display: inline-block;
+    text-align: center;
 }
 
 .cyber-services-list li:hover {
@@ -287,6 +302,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     border: 2px solid #333;
     position: relative;
+    overflow: hidden; /* match contact form top-bar animation behavior */
 }
 
 .cyber-cta::before {
@@ -512,6 +528,23 @@ body {
     border-color: #333 !important;
 }
 
+/* Tablet & Mobile Responsive */
+/* Use softer float where columns stack (below lg breakpoint) */
+@media (max-width: 991.98px) {
+    .cyber-card {
+        margin-left: 0 !important;
+        justify-content: center;
+        animation: float-sm 6s ease-in-out infinite;
+        transform: none;
+        z-index: 0;
+        will-change: transform;
+    }
+    .cyber-cards {
+        margin-top: 1rem;
+        z-index: 0;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .cyber-image-placeholder {
@@ -522,8 +555,17 @@ body {
     .cyber-card {
         margin-left: 0 !important;
         justify-content: center;
+        /* Subtle motion without overlap */
+        animation: float-sm 6s ease-in-out infinite;
+        transform: none;
     }
     
+    /* Ensure stacked cards have breathing room below buttons */
+    .cyber-cards {
+        margin-top: 0.75rem;
+        z-index: 0;
+    }
+
     .cyber-form {
         padding: 1.5rem;
     }
@@ -537,6 +579,9 @@ body {
     
     .cyber-card {
         padding: 1rem;
+        /* Keep gentle motion even on small screens */
+        animation: float-sm 6s ease-in-out infinite;
+        transform: none;
     }
     
     .cyber-form {
@@ -556,4 +601,3 @@ body {
         animation: none;
     }
 }
-
