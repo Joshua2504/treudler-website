@@ -78,7 +78,8 @@ body {
         radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 50%);
-    animation: pulse 4s ease-in-out infinite alternate;
+    /* Disable background pulse to keep hero static */
+    animation: none;
     /* Decorative layer must not block clicks */
     pointer-events: none;
     z-index: 0;
@@ -533,6 +534,10 @@ body {
 /* Tablet & Mobile Responsive */
 /* Use softer float where columns stack (below lg breakpoint) */
 @media (max-width: 991.98px) {
+    /* Ensure absolutely no motion on mobile */
+    .cyber-hero::before {
+        animation: none !important;
+    }
     .cyber-card {
         margin-left: 0 !important;
         justify-content: center;
