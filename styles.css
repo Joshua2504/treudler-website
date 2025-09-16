@@ -166,20 +166,19 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    animation: float 6s ease-in-out infinite;
+    /* Disable floating animation for hero boxes */
+    animation: none;
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
     position: relative;
     overflow: hidden;
 }
 
 .cyber-card:nth-child(2) {
-    animation-delay: -2s;
     border-color: #ff0080;
     box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
 }
 
 .cyber-card:nth-child(3) {
-    animation-delay: -4s;
     border-color: #00bfff;
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
 }
@@ -537,7 +536,8 @@ body {
     .cyber-card {
         margin-left: 0 !important;
         justify-content: center;
-        animation: float-sm 6s ease-in-out infinite;
+        /* Keep static on smaller screens as well */
+        animation: none;
         transform: none;
         z-index: 0;
         will-change: transform;
@@ -582,8 +582,8 @@ body {
     
     .cyber-card {
         padding: 1rem;
-        /* Keep gentle motion even on small screens */
-        animation: float-sm 6s ease-in-out infinite;
+        /* No motion on small screens */
+        animation: none;
         transform: none;
     }
     
