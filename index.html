@@ -6,207 +6,266 @@
     <meta name="description" content="Joshua Treudler - Professional IT Managed Services. Expert cloud management, security, and technical support for your business.">
     <meta name="keywords" content="managed services, IT support, cloud management, Joshua Treudler, technical support">
     <title>Joshua Treudler - Managed Services Done Right</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Treudler</h2>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#packages" class="nav-link">What I Manage</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top cyber-nav">
+        <div class="container">
+            <a class="navbar-brand cyber-brand" href="#home">
+                <span class="text-danger">&gt;</span> Treudler
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link cyber-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-link" href="#packages">What I Manage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cyber-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Managed Services<br><span class="highlight">Done Right</span></h1>
-                <p class="hero-description">// I'm Joshua, and with my team of experts, we manage your IT infrastructure so you can focus on growing your business.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#services" class="btn btn-secondary">View Services</a>
+    <section id="home" class="cyber-hero d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold cyber-title mb-4">
+                        <span class="text-danger">$</span> Managed Services<br>
+                        <span class="cyber-highlight">Done Right</span>
+                    </h1>
+                    <p class="lead cyber-text mb-4">
+                        // I'm Joshua, and with my team of experts, we manage your IT infrastructure so you can focus on growing your business.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn cyber-btn-primary">Get Started</a>
+                        <a href="#services" class="btn cyber-btn-secondary">View Services</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <i class="fas fa-server"></i>
-                    <span>24/7 Monitoring</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Security & Backup</span>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-rocket"></i>
-                    <span>Fast Support</span>
+                <div class="col-lg-6">
+                    <div class="cyber-cards">
+                        <div class="cyber-card mb-3">
+                            <i class="fas fa-server cyber-icon-green"></i>
+                            <span>24/7 Monitoring</span>
+                        </div>
+                        <div class="cyber-card mb-3 ms-4">
+                            <i class="fas fa-shield-alt cyber-icon-pink"></i>
+                            <span>Security & Backup</span>
+                        </div>
+                        <div class="cyber-card ms-5">
+                            <i class="fas fa-rocket cyber-icon-blue"></i>
+                            <span>Fast Support</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="py-5 cyber-section-dark">
         <div class="container">
-            <div class="section-header">
-                <h2>What I Offer</h2>
-                <p>Comprehensive IT managed services to keep your business running smoothly</p>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold cyber-section-title">
+                    <span class="text-danger">//</span> What I Offer
+                </h2>
+                <p class="lead cyber-text">Comprehensive IT managed services to keep your business running smoothly</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon green mb-3">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title green">Cloud Management</h5>
+                            <p class="card-text cyber-text">Complete AWS, Azure, and GCP management including migration, optimization, and ongoing support.</p>
+                        </div>
                     </div>
-                    <h3>Cloud Management</h3>
-                    <p>Complete AWS, Azure, and GCP management including migration, optimization, and ongoing support.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon pink mb-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title pink">Infrastructure Monitoring</h5>
+                            <p class="card-text cyber-text">24/7 proactive monitoring of your servers, networks, and applications with real-time alerts.</p>
+                        </div>
                     </div>
-                    <h3>Infrastructure Monitoring</h3>
-                    <p>24/7 proactive monitoring of your servers, networks, and applications with real-time alerts.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-life-ring"></i>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon green mb-3">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title green">Help Desk Support</h5>
+                            <p class="card-text cyber-text">Responsive technical support for your team with ticketing system and remote assistance.</p>
+                        </div>
                     </div>
-                    <h3>Help Desk Support</h3>
-                    <p>Responsive technical support for your team with ticketing system and remote assistance.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon pink mb-3">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title pink">Backup & Recovery</h5>
+                            <p class="card-text cyber-text">Automated backup solutions and disaster recovery planning to protect your critical data.</p>
+                        </div>
                     </div>
-                    <h3>Backup & Recovery</h3>
-                    <p>Automated backup solutions and disaster recovery planning to protect your critical data.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon green mb-3">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title green">Security Management</h5>
+                            <p class="card-text cyber-text">Endpoint protection, firewall management, and security updates to keep your systems safe.</p>
+                        </div>
                     </div>
-                    <h3>Security Management</h3>
-                    <p>Endpoint protection, firewall management, and security updates to keep your systems safe.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card cyber-service-card h-100">
+                        <div class="card-body">
+                            <div class="cyber-service-icon pink mb-3">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h5 class="card-title cyber-card-title pink">System Maintenance</h5>
+                            <p class="card-text cyber-text">Regular updates, patches, and optimization to ensure peak performance and reliability.</p>
+                        </div>
                     </div>
-                    <h3>System Maintenance</h3>
-                    <p>Regular updates, patches, and optimization to ensure peak performance and reliability.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Examples Section -->
-    <section id="packages" class="packages">
+    <section id="packages" class="py-5 cyber-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Services I Manage</h2>
-                <p>Comprehensive IT services to keep your business technology running smoothly</p>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold cyber-section-title">
+                    <span class="text-danger">//</span> Services I Manage
+                </h2>
+                <p class="lead cyber-text">Comprehensive IT services to keep your business technology running smoothly</p>
             </div>
-            <div class="services-list">
-                <div class="services-column">
-                    <h3>Infrastructure & Cloud</h3>
-                    <ul>
-                        <li><i class="fas fa-server"></i> Server Management & Maintenance</li>
-                        <li><i class="fas fa-cloud"></i> AWS, Azure & GCP Management</li>
-                        <li><i class="fas fa-network-wired"></i> Network Configuration & Monitoring</li>
-                        <li><i class="fas fa-database"></i> Database Administration</li>
-                        <li><i class="fas fa-hdd"></i> Storage Solutions & Management</li>
-                        <li><i class="fas fa-wifi"></i> Wireless Network Setup</li>
-                        <li><i class="fas fa-globe"></i> Domain & DNS Management</li>
-                        <li><i class="fas fa-chart-line"></i> Performance Monitoring</li>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="cyber-services-heading green">Infrastructure & Cloud</h3>
+                    <ul class="list-unstyled cyber-services-list">
+                        <li><i class="fas fa-server text-success me-3"></i> Server Management & Maintenance</li>
+                        <li><i class="fas fa-cloud text-success me-3"></i> AWS, Azure & GCP Management</li>
+                        <li><i class="fas fa-network-wired text-success me-3"></i> Network Configuration & Monitoring</li>
+                        <li><i class="fas fa-database text-success me-3"></i> Database Administration</li>
+                        <li><i class="fas fa-hdd text-success me-3"></i> Storage Solutions & Management</li>
+                        <li><i class="fas fa-wifi text-success me-3"></i> Wireless Network Setup</li>
+                        <li><i class="fas fa-globe text-success me-3"></i> Domain & DNS Management</li>
+                        <li><i class="fas fa-chart-line text-success me-3"></i> Performance Monitoring</li>
                     </ul>
 
-                    <h3>Security & Compliance</h3>
-                    <ul>
-                        <li><i class="fas fa-shield-alt"></i> Firewall Configuration</li>
-                        <li><i class="fas fa-user-secret"></i> Endpoint Security</li>
-                        <li><i class="fas fa-lock"></i> VPN Setup & Management</li>
-                        <li><i class="fas fa-key"></i> SSL Certificate Management</li>
-                        <li><i class="fas fa-eye"></i> Security Monitoring</li>
-                        <li><i class="fas fa-file-contract"></i> Compliance Management</li>
-                        <li><i class="fas fa-bug"></i> Vulnerability Assessments</li>
-                        <li><i class="fas fa-user-shield"></i> Identity & Access Management</li>
+                    <h3 class="cyber-services-heading pink mt-5">Security & Compliance</h3>
+                    <ul class="list-unstyled cyber-services-list">
+                        <li><i class="fas fa-shield-alt cyber-icon-pink me-3"></i> Firewall Configuration</li>
+                        <li><i class="fas fa-user-secret cyber-icon-pink me-3"></i> Endpoint Security</li>
+                        <li><i class="fas fa-lock cyber-icon-pink me-3"></i> VPN Setup & Management</li>
+                        <li><i class="fas fa-key cyber-icon-pink me-3"></i> SSL Certificate Management</li>
+                        <li><i class="fas fa-eye cyber-icon-pink me-3"></i> Security Monitoring</li>
+                        <li><i class="fas fa-file-contract cyber-icon-pink me-3"></i> Compliance Management</li>
+                        <li><i class="fas fa-bug cyber-icon-pink me-3"></i> Vulnerability Assessments</li>
+                        <li><i class="fas fa-user-shield cyber-icon-pink me-3"></i> Identity & Access Management</li>
                     </ul>
                 </div>
                 
-                <div class="services-column">
-                    <h3>Business Applications</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> Email Systems (Office 365, Gmail)</li>
-                        <li><i class="fas fa-comments"></i> Communication Platforms</li>
-                        <li><i class="fas fa-file-alt"></i> Document Management</li>
-                        <li><i class="fas fa-calendar"></i> Calendar & Scheduling Systems</li>
-                        <li><i class="fas fa-users"></i> CRM System Management</li>
-                        <li><i class="fas fa-chart-bar"></i> Business Intelligence Tools</li>
-                        <li><i class="fas fa-shopping-cart"></i> E-commerce Platforms</li>
-                        <li><i class="fas fa-mobile-alt"></i> Mobile Device Management</li>
+                <div class="col-lg-6">
+                    <h3 class="cyber-services-heading pink">Business Applications</h3>
+                    <ul class="list-unstyled cyber-services-list">
+                        <li><i class="fas fa-envelope cyber-icon-pink me-3"></i> Email Systems (Office 365, Gmail)</li>
+                        <li><i class="fas fa-comments cyber-icon-pink me-3"></i> Communication Platforms</li>
+                        <li><i class="fas fa-file-alt cyber-icon-pink me-3"></i> Document Management</li>
+                        <li><i class="fas fa-calendar cyber-icon-pink me-3"></i> Calendar & Scheduling Systems</li>
+                        <li><i class="fas fa-users cyber-icon-pink me-3"></i> CRM System Management</li>
+                        <li><i class="fas fa-chart-bar cyber-icon-pink me-3"></i> Business Intelligence Tools</li>
+                        <li><i class="fas fa-shopping-cart cyber-icon-pink me-3"></i> E-commerce Platforms</li>
+                        <li><i class="fas fa-mobile-alt cyber-icon-pink me-3"></i> Mobile Device Management</li>
                     </ul>
 
-                    <h3>Support & Maintenance</h3>
-                    <ul>
-                        <li><i class="fas fa-life-ring"></i> 24/7 Technical Support</li>
-                        <li><i class="fas fa-backup"></i> Automated Backup Solutions</li>
-                        <li><i class="fas fa-sync"></i> Software Updates & Patches</li>
-                        <li><i class="fas fa-tools"></i> System Optimization</li>
-                        <li><i class="fas fa-ambulance"></i> Disaster Recovery Planning</li>
-                        <li><i class="fas fa-code"></i> Custom Script Development</li>
-                        <li><i class="fas fa-cogs"></i> Process Automation</li>
-                        <li><i class="fas fa-clipboard-list"></i> Documentation & Reporting</li>
+                    <h3 class="cyber-services-heading blue mt-5">Support & Maintenance</h3>
+                    <ul class="list-unstyled cyber-services-list">
+                        <li><i class="fas fa-life-ring cyber-icon-blue me-3"></i> 24/7 Technical Support</li>
+                        <li><i class="fas fa-backup cyber-icon-blue me-3"></i> Automated Backup Solutions</li>
+                        <li><i class="fas fa-sync cyber-icon-blue me-3"></i> Software Updates & Patches</li>
+                        <li><i class="fas fa-tools cyber-icon-blue me-3"></i> System Optimization</li>
+                        <li><i class="fas fa-ambulance cyber-icon-blue me-3"></i> Disaster Recovery Planning</li>
+                        <li><i class="fas fa-code cyber-icon-blue me-3"></i> Custom Script Development</li>
+                        <li><i class="fas fa-cogs cyber-icon-blue me-3"></i> Process Automation</li>
+                        <li><i class="fas fa-clipboard-list cyber-icon-blue me-3"></i> Documentation & Reporting</li>
                     </ul>
                 </div>
             </div>
-            <div class="services-cta">
-                <p>Don't see what you need? I work with cutting-edge technologies and can adapt to your specific requirements.</p>
-                <a href="#contact" class="btn btn-primary">Discuss Your Needs</a>
+            <div class="text-center mt-5">
+                <div class="cyber-cta p-4">
+                    <p class="cyber-text mb-4">Don't see what you need? I work with cutting-edge technologies and can adapt to your specific requirements.</p>
+                    <a href="#contact" class="btn cyber-btn-primary">Discuss Your Needs</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="py-5 cyber-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Joshua & Team</h2>
-                    <p>I'm Joshua, and I work with a dedicated team of IT experts who understand that technology should work for you, not against you. My mission: provide reliable, proactive IT management that keeps your business running smoothly.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number">99.8%</span>
-                            <span class="stat-label">Uptime</span>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold cyber-section-title">
+                        <span class="text-danger">&gt;&gt;</span> Joshua & Team
+                    </h2>
+                    <p class="cyber-text mb-4">I'm Joshua, and I work with a dedicated team of IT experts who understand that technology should work for you, not against you. My mission: provide reliable, proactive IT management that keeps your business running smoothly.</p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="cyber-stat">
+                                <div class="cyber-stat-number green">99.8%</div>
+                                <div class="cyber-stat-label">Uptime</div>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">&lt;15min</span>
-                            <span class="stat-label">Response Time</span>
+                        <div class="col-4">
+                            <div class="cyber-stat">
+                                <div class="cyber-stat-number pink">&lt;15min</div>
+                                <div class="cyber-stat-label">Response Time</div>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Happy Clients</span>
+                        <div class="col-4">
+                            <div class="cyber-stat">
+                                <div class="cyber-stat-number blue">50+</div>
+                                <div class="cyber-stat-label">Happy Clients</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-users"></i>
-                        <p>Joshua & His Expert Team</p>
+                <div class="col-lg-6 text-center">
+                    <div class="cyber-image-placeholder mx-auto">
+                        <i class="fas fa-users fa-4x mb-3"></i>
+                        <p class="fw-bold">Joshua & His Expert Team</p>
                     </div>
                 </div>
             </div>
@@ -214,77 +273,94 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="py-5 cyber-section-dark">
         <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to streamline your IT operations? Let's discuss your needs.</p>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold cyber-section-title">
+                    <span class="text-danger">//</span> Get In Touch
+                </h2>
+                <p class="lead cyber-text">Ready to streamline your IT operations? Let's discuss your needs.</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="cyber-contact-item mb-4">
+                        <div class="cyber-contact-icon green">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <div>
-                            <h4>Email</h4>
-                            <p>joshua@treudler.com</p>
+                            <h5 class="cyber-contact-title">Email</h5>
+                            <p class="cyber-text mb-0">joshua@treudler.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                    <div class="cyber-contact-item mb-4">
+                        <div class="cyber-contact-icon pink">
+                            <i class="fas fa-phone"></i>
+                        </div>
                         <div>
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <h5 class="cyber-contact-title">Phone</h5>
+                            <p class="cyber-text mb-0">+1 (555) 123-4567</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
+                    <div class="cyber-contact-item">
+                        <div class="cyber-contact-icon blue">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <div>
-                            <h4>Business Hours</h4>
-                            <p>Mon-Fri 9AM-6PM EST</p>
+                            <h5 class="cyber-contact-title">Business Hours</h5>
+                            <p class="cyber-text mb-0">Mon-Fri 9AM-6PM EST</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Company Name">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Tell me about your IT needs" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="col-lg-6">
+                    <form class="cyber-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control cyber-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control cyber-input" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control cyber-input" placeholder="Company Name">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control cyber-input" rows="5" placeholder="Tell me about your IT needs" required></textarea>
+                        </div>
+                        <button type="submit" class="btn cyber-btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="cyber-footer py-4">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Treudler</h3>
-                    <p>Managed Services Done Right</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h5 class="cyber-brand mb-2">
+                        <span class="text-danger">#</span> Treudler
+                    </h5>
+                    <p class="cyber-text mb-3 mb-lg-0">Managed Services Done Right</p>
                 </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#packages">What I Manage</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-wrap justify-content-lg-end gap-3">
+                        <a href="#home" class="cyber-footer-link">Home</a>
+                        <a href="#services" class="cyber-footer-link">Services</a>
+                        <a href="#packages" class="cyber-footer-link">What I Manage</a>
+                        <a href="#about" class="cyber-footer-link">About</a>
+                        <a href="#contact" class="cyber-footer-link">Contact</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Treudler. All rights reserved.</p>
+            <hr class="cyber-divider my-3">
+            <div class="text-center">
+                <p class="cyber-text mb-0">&copy; 2025 Treudler. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

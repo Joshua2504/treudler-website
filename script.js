@@ -1,46 +1,4 @@
-// Mobile Menu Toggle with enhanced functionality
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const body = document.body;
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-    // Prevent body scroll when menu is open
-    if (navMenu.classList.contains('active')) {
-        body.style.overflow = 'hidden';
-    } else {
-        body.style.overflow = '';
-    }
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        body.style.overflow = '';
-    });
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        body.style.overflow = '';
-    }
-});
-
-// Handle window resize
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        body.style.overflow = '';
-    }
-});
+// Bootstrap 5 Compatible JavaScript for Cyber Theme
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -48,17 +6,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Account for fixed navbar height
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
+            
+            // Close mobile menu if open (Bootstrap will handle this automatically)
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
         }
     });
 });
 
-// Enhanced navbar with hacker styling
+// Enhanced navbar with cyber styling on scroll
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.cyber-nav');
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(10, 10, 10, 0.98)';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 255, 65, 0.3)';
@@ -68,7 +37,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Matrix rain effect for background
+// Matrix rain effect for background (simplified)
 function createMatrixRain() {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -125,98 +94,60 @@ function createMatrixRain() {
 // Initialize matrix rain
 createMatrixRain();
 
-// Terminal typing effect for hero title
-function terminalType(element, text, speed = 100) {
-    element.innerHTML = '';
-    let i = 0;
-    const cursor = '<span class="cursor">|</span>';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML = text.substring(0, i + 1) + cursor;
-            i++;
-            setTimeout(type, speed);
-        } else {
-            // Remove cursor after typing is complete
-            setTimeout(() => {
-                element.innerHTML = text;
-            }, 1000);
-        }
-    }
-    
-    type();
-}
-
-// Glitch effect for elements
-function glitchEffect(element) {
-    const originalText = element.textContent;
-    const glitchChars = '!@#$%^&*(){}[]|\\:";\'<>?,./`~';
-    let glitchCount = 0;
-    
-    function glitch() {
-        if (glitchCount < 3) {
-            let glitchedText = '';
-            for (let i = 0; i < originalText.length; i++) {
-                if (Math.random() > 0.9) {
-                    glitchedText += glitchChars[Math.floor(Math.random() * glitchChars.length)];
-                } else {
-                    glitchedText += originalText[i];
-                }
-            }
-            element.textContent = glitchedText;
-            glitchCount++;
-            setTimeout(glitch, 50);
-        } else {
-            element.textContent = originalText;
-        }
-    }
-    
-    glitch();
-}
-
-// Contact form with hacker styling
-const contactForm = document.querySelector('.contact-form');
+// Contact form with cyber styling
+const contactForm = document.querySelector('.cyber-form');
+if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const button = this.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-    
-    // Simple validation
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const message = this.querySelector('textarea').value;
-    
-    if (!name || !email || !message) {
-        showNotification('Please fill in all required fields.', 'error');
-        return;
-    }
-    
-    // Simulate form submission process
-    button.textContent = 'Sending...';
-    button.style.background = '#ff0080';
-    
-    setTimeout(() => {
-        button.textContent = 'Message Sent!';
-        button.style.background = '#00ff41';
+        e.preventDefault();
         
-        showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
-        this.reset();
+        const button = this.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        
+        // Simple validation
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+        
+        if (!name || !email || !message) {
+            showNotification('Please fill in all required fields.', 'error');
+            return;
+        }
+        
+        // Simulate form submission process
+        button.textContent = 'Sending...';
+        button.classList.remove('cyber-btn-primary');
+        button.style.background = '#ff0080';
+        button.style.borderColor = '#ff0080';
         
         setTimeout(() => {
-            button.textContent = originalText;
-            button.style.background = '';
-        }, 2000);
-    }, 1500);
-});// Enhanced notification system with hacker styling
+            button.textContent = 'Message Sent!';
+            button.style.background = '#00ff41';
+            button.style.borderColor = '#00ff41';
+            button.style.color = '#0a0a0a';
+            
+            showNotification('Thank you! We\'ll get back to you within 24 hours.', 'success');
+            this.reset();
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.add('cyber-btn-primary');
+                button.style.background = '';
+                button.style.borderColor = '';
+                button.style.color = '';
+            }, 2000);
+        }, 1500);
+    });
+}
+
+// Enhanced notification system with cyber styling
 function showNotification(message, type = 'info') {
-    const existingNotification = document.querySelector('.notification');
+    const existingNotification = document.querySelector('.cyber-notification');
     if (existingNotification) {
         existingNotification.remove();
     }
     
     const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
+    notification.className = `cyber-notification notification-${type}`;
     
     const colors = {
         success: '#00ff41',
@@ -290,7 +221,7 @@ function removeNotification(notification) {
     }, 300);
 }
 
-// Animate elements on scroll with hacker effects
+// Animate elements on scroll with cyber effects
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -303,19 +234,46 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'translateY(0)';
             
             // Add glitch effect to service cards
-            if (entry.target.classList.contains('service-card')) {
+            if (entry.target.classList.contains('cyber-service-card')) {
                 setTimeout(() => {
-                    const h3 = entry.target.querySelector('h3');
-                    if (h3) glitchEffect(h3);
+                    const h5 = entry.target.querySelector('h5');
+                    if (h5) glitchEffect(h5);
                 }, Math.random() * 1000);
             }
         }
     });
 }, observerOptions);
 
-// Enhanced hover effects with hacker styling
+// Glitch effect for elements
+function glitchEffect(element) {
+    const originalText = element.textContent;
+    const glitchChars = '!@#$%^&*(){}[]|\\:";\'<>?,./`~';
+    let glitchCount = 0;
+    
+    function glitch() {
+        if (glitchCount < 3) {
+            let glitchedText = '';
+            for (let i = 0; i < originalText.length; i++) {
+                if (Math.random() > 0.9) {
+                    glitchedText += glitchChars[Math.floor(Math.random() * glitchChars.length)];
+                } else {
+                    glitchedText += originalText[i];
+                }
+            }
+            element.textContent = glitchedText;
+            glitchCount++;
+            setTimeout(glitch, 50);
+        } else {
+            element.textContent = originalText;
+        }
+    }
+    
+    glitch();
+}
+
+// Enhanced hover effects with cyber styling
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .package-card, .contact-item, .stat');
+    const animateElements = document.querySelectorAll('.cyber-service-card, .cyber-contact-item, .cyber-stat');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -324,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Add cyber pulse effect to service cards
-    document.querySelectorAll('.service-card, .package-card').forEach(card => {
+    document.querySelectorAll('.cyber-service-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px) scale(1.02)';
             
@@ -354,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Hacker konami code with enhanced feedback
+// Cyber konami code with enhanced feedback
 let konamiCode = [];
 const konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
 
@@ -365,9 +323,9 @@ document.addEventListener('keydown', (e) => {
     }
     
     if (konamiCode.join(',') === konami.join(',')) {
-        // Epic hacker easter egg
+        // Epic cyber easter egg
         document.body.style.animation = 'matrix-glitch 2s ease-in-out';
-        showNotification('� ADMIN ACCESS GRANTED! Welcome to the inner circle, fellow hacker!', 'success');
+        showNotification('🚀 ADMIN ACCESS GRANTED! Welcome to the inner circle, fellow hacker!', 'success');
         
         // Add some visual flair
         setTimeout(() => {
@@ -378,19 +336,9 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Add CSS for glitch animation
+// Add CSS for animations and effects
 const style = document.createElement('style');
 style.textContent = `
-    .cursor {
-        animation: blink 1s infinite;
-        color: #00ff41;
-    }
-    
-    @keyframes blink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
-    }
-    
     @keyframes scan {
         0% { transform: translateX(-100%); }
         100% { transform: translateX(100%); }
@@ -405,6 +353,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('🚀 Treudler cyberspace initialized successfully!');
+console.log('🚀 Treudler cyberspace initialized with Bootstrap 5!');
 console.log('🔐 Security protocols active. All systems green.');
 console.log('💡 Tip: Try the konami code (↑↑↓↓←→←→BA) for admin access!');
